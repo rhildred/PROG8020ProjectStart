@@ -1,0 +1,15 @@
+<!Doctype html>
+<html>
+    <head>
+        <title><?php echo $this->data["title"] ?></title>
+        <link rel="stylesheet" href="css/styles.css" />
+    </head>
+    <body>
+        <?php 
+    include "_nav.phtml";
+    $this->renderBody(); ?>
+        <footer>
+            <hr />
+            <div class="footer">&copy; Rich Hildred <script>document.write(new Date().getFullYear())</script><a href="privacy" class="pull-right">Privacy policy</a></div></footer>
+    </body>
+</html>
