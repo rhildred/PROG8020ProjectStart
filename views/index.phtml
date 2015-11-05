@@ -67,3 +67,10 @@ $this->layout("_layout.phtml");
     <a data-slide="prev" href="#myCarousel2" class="left carousel-control"><i class="fa fa-arrow-left"></i></a>
     <a data-slide="next" href="#myCarousel2" class="right carousel-control"><i class="fa fa-arrow-right"></i></a>
 </div>
+<script>
+    jQuery("document").ready(function() {
+        jQuery("#myCarousel2").carousel({
+            interval : false
+        });
+    });
+</script>

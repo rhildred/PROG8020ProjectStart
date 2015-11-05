@@ -1,3 +1,4 @@
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css);
 @import url(bootstrap.min.css);
 @font-face {
     font-family: Catull;
@@ -61,4 +62,9 @@ body{
 
 .footer {
     padding: 0 1em;
+}
+
+.carousel-control {
+    width: auto;
+    top: 33%;
 }
