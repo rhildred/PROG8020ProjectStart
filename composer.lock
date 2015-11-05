@@ -4,9 +4,90 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "384838a335c5ea1fac44739e0ef414e9",
-    "content-hash": "0c5390cbc12288dfac94417fa8f3659f",
+    "hash": "fa0a9f7a71d50695b144869842f3cd3e",
+    "content-hash": "8bfdec8ef7d98b84b2c5bf5a9cb4356a",
     "packages": [
+        {
+            "name": "michelf/php-markdown",
+            "version": "1.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/michelf/php-markdown.git",
+                "reference": "e1aabe18173231ebcefc90e615565742fc1c7fd9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/michelf/php-markdown/zipball/e1aabe18173231ebcefc90e615565742fc1c7fd9",
+                "reference": "e1aabe18173231ebcefc90e615565742fc1c7fd9",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-lib": "1.4.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Michelf": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "John Gruber",
+                    "homepage": "http://daringfireball.net/"
+                },
+                {
+                    "name": "Michel Fortin",
+                    "email": "michel.fortin@michelf.ca",
+                    "homepage": "https://michelf.ca/",
+                    "role": "Developer"
+                }
+            ],
+            "description": "PHP Markdown",
+            "homepage": "https://michelf.ca/projects/php-markdown/",
+            "keywords": [
+                "markdown"
+            ],
+            "time": "2015-03-01 12:03:08"
+        },
+        {
+            "name": "rhildred/editable",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/rhildred/editable.git",
+                "reference": "cd8725f645ce76726ba730cbabc7b6ec70f2aa02"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/rhildred/editable/zipball/cd8725f645ce76726ba730cbabc7b6ec70f2aa02",
+                "reference": "cd8725f645ce76726ba730cbabc7b6ec70f2aa02",
+                "shasum": ""
+            },
+            "require": {
+                "michelf/php-markdown": "*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "RHildred\\Editable": "src",
+                    "kbjr": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "time": "2015-01-11 14:58:51"
+        },
         {
             "name": "rhildred/slimphpviews",
             "version": "dev-master",
@@ -84,7 +165,8 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "rhildred/slimphpviews": 20
+        "rhildred/slimphpviews": 20,
+        "rhildred/editable": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

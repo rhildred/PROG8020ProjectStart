@@ -10,4 +10,13 @@ $oApp->get("/", function()use($oApp){
    $oApp->render("index.phtml"); 
 });
 
+$oApp->get("/about", function()use($oApp){
+   $oApp->render("about.phtml"); 
+});
+
+$oApp->get("/contact", function()use($oApp){
+   $oApp->render("contact.phtml"); 
+});
+
+
 $oApp->run();

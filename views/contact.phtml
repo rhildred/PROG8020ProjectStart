@@ -1,0 +1,10 @@
+<?php 
+$this->data["title"]="winona cat sitting: contact";
+$this->layout("_layout.phtml");
+echo $this->sPage;
+?>
+<div class="bookmark">
+<?php
+\RHildred\Editable\Markdown::render( __DIR__ . "/contact.md");
+?>
+</div>
