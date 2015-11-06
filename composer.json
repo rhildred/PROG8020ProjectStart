@@ -1,7 +1,10 @@
 {
     "require": {
+<<<<<<< HEAD
         "slim/slim": "^2.6",
         "rhildred/slimphpviews": "dev-master",
         "rhildred/editable": "dev-master"
+=======
+>>>>>>> 02513edb0bd8dcab48da61c03f9185aafecd8a0e
     }
 }
