@@ -35,7 +35,15 @@ $oApp->get("/products/:productID", function($nId) use($oApp, $oDb){
     $oStmt->execute();
     $aImages = $oStmt->fetchAll(PDO::FETCH_OBJ);
 
-    $oApp->render("product.phtml", array("product"=>$aProducts[0], "images"=>$aImages)); 
+    //fetching offers
+    $oStmt = $oDb->prepare("SELECT * FROM offers WHERE productID = :id");
+    $oStmt->bindParam("id", $nId);
+    $oStmt->execute();
+    $aOffers = $oStmt->fetchAll(PDO::FETCH_OBJ);
+
+    
+    // render template with data
+    $oApp->render("product.phtml", array("product"=>$aProducts[0], "images"=>$aImages, "offers"=>$aOffers)); 
 });
 
 

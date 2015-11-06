@@ -7,24 +7,14 @@ $this->layout("_layout.phtml");
         <img src="/<?php echo $this->data["images"][0]->URL ?>" alt="<?php echo $this->data["product"]->name; ?>" title="<?php echo $this->data["product"]->name; ?>" />
         <h1><?php echo $this->data["product"]->description; ?></h1>
     </div>
+    <?php foreach($this->data["offers"] as $oOffer){ ?>
     <div class="row container">
 
-        <div class="col-md-8">single walk 1/2 hour</div>
-        <div class="col-md-3"><span class="pull-right">$17</span></div>
+        <div class="col-md-8"><?php echo $oOffer->description; ?></div>
+        <div class="col-md-3"><span class="pull-right">$<?php echo $oOffer->price * pow(10, $oOffer->priceExponent); ?></span></div>
         <div class="col-md-1"><button class="btn btn-primary btn-large">Add to cart</button></div>
     </div>
-    <div class="row container">
-
-        <div class="col-md-8">1/2 hour walk 3 times per week</div>
-        <div class="col-md-3"><span class="pull-right">$49</span></div>
-        <div class="col-md-1"><button class="btn btn-primary btn-large">Add to cart</button></div>
-    </div>
-    <div class="row container">
-
-        <div class="col-md-8">1/2 hour walk 5 times per week paying monthly</div>
-        <div class="col-md-3"><span class="pull-right">$299</span></div>
-        <div class="col-md-1"><button class="btn btn-primary btn-large">Add to cart</button></div>
-    </div>
+    <?php } ?>
 </div>
 <div data-ride="carousel" class="carousel slide" id="myCarousel2">
     <div id="myCarousel2PlaceHolder" class="carousel-inner"><div class="item active">
