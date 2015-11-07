@@ -17,43 +17,31 @@ $this->layout("_layout.phtml");
     <?php } ?>
 </div>
 <div data-ride="carousel" class="carousel slide" id="myCarousel2">
-    <div id="myCarousel2PlaceHolder" class="carousel-inner"><div class="item active">
-        <div class="col-md-3">
-            <a href="#1/1">
-                <img alt="dog walking" src="/images/thumbs/canstockphotosheppardwithowner.png" title="dog walking">
-                dog walking
-            </a>
-        </div>
+    <div id="myCarousel2PlaceHolder" class="carousel-inner">
+    <?php 
+    $aProducts = $this->data["products"];
+    $nProducts = count($aProducts);
+    $nCurrent = 0;
+    while($nCurrent < $nProducts){ ?>
+        <div class="item<?php if($nCurrent == 0) echo " active"; ?>">
+            <?php
+            for($n = 0; $n < 4 && $nCurrent < $nProducts; $n++){ 
+                $oProduct = $aProducts[$nCurrent];
+            ?>
+                <div class="col-md-3">
+                    <a href="/products/<?php echo $oProduct->productID; ?>">
+                        <img alt="<?php echo $oProduct->name ?>" src="/<?php echo $oProduct->image; ?>" title="<?php echo $oProduct->name ?>">
+                        <p><?php echo $oProduct->name ?></p>
+                    </a>
+                </div>
+                
+            <?php 
+                $nCurrent++;
+            } ?>
 
-        <div class="col-md-3">
-            <a href="#1/3">
-                <img alt="cat visits" src="/images/thumbs/canstockphotoladywithcat.png" title="cat visits">
-                cat visits
-            </a>
         </div>
-
-        <div class="col-md-3">
-            <a href="#1/2">
-                <img alt="sleepovers" src="/images/thumbs/canstockphotosleepinglab.png" title="sleepovers">
-                sleepovers
-            </a>
-        </div>
-
-        <div class="col-md-3">
-            <a href="#1/4">
-                <img alt="crates" src="/images/thumbs/NatalieMaynorDogsInCrate.png" title="crates">
-                crates
-            </a>
-        </div>
-        </div><div class="item">
-        <div class="col-md-3">
-            <a href="#1/5">
-                <img alt="vet visits" src="/images/thumbs/JeffreyBeallVetAndCat.png" title="vet visits">
-                vet visits
-            </a>
-        </div>
-
-        </div></div>
+    <?php } ?>
+    </div>
     <a data-slide="prev" href="#myCarousel2" class="left carousel-control"><i class="fa fa-arrow-left"></i></a>
     <a data-slide="next" href="#myCarousel2" class="right carousel-control"><i class="fa fa-arrow-right"></i></a>
 </div>

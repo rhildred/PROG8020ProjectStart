@@ -9,8 +9,8 @@ $oApp = new \Slim\Slim(array(
         'view' => new \PHPView\PHPView(),
         'templates.path' => __DIR__ . "/../views" ));
                        
-$oApp->get("/", function()use($oApp){
-   $oApp->render("index.phtml"); 
+$oApp->get("/", function(){
+    renderProduct(1);
 });
 
 $oApp->get("/about", function()use($oApp){
@@ -21,13 +21,24 @@ $oApp->get("/contact", function()use($oApp){
    $oApp->render("contact.phtml"); 
 });
 
-$oApp->get("/products/:productID", function($nId) use($oApp, $oDb){
-    
+$oApp->get("/privacy", function()use($oApp){
+   $oApp->render("privacy.phtml"); 
+});
+
+$oApp->get("/products/:productID", function($nId){
+    renderProduct($nId);
+});
+
+
+$oApp->run();
+
+function renderProduct($nId){
+    global $oApp, $oDb;
     // fetching product
     $oStmt = $oDb->prepare("SELECT * FROM products WHERE productID = :id");
     $oStmt->bindParam("id", $nId);
     $oStmt->execute();
-    $aProducts = $oStmt->fetchAll(PDO::FETCH_OBJ);
+    $aProduct = $oStmt->fetchAll(PDO::FETCH_OBJ);
     
     //fetching images
     $oStmt = $oDb->prepare("SELECT * FROM images WHERE productID = :id");
@@ -41,10 +52,11 @@ $oApp->get("/products/:productID", function($nId) use($oApp, $oDb){
     $oStmt->execute();
     $aOffers = $oStmt->fetchAll(PDO::FETCH_OBJ);
 
+    //fetching list of products for the bar across the bottom
+    $oStmt = $oDb->prepare("SELECT * FROM products");
+    $oStmt->execute();
+    $aProducts = $oStmt->fetchAll(PDO::FETCH_OBJ);    
     
     // render template with data
-    $oApp->render("product.phtml", array("product"=>$aProducts[0], "images"=>$aImages, "offers"=>$aOffers)); 
-});
-
-
-$oApp->run();
+    $oApp->render("product.phtml", array("product"=>$aProduct[0], "images"=>$aImages, "offers"=>$aOffers, "products"=>$aProducts));   
+}
