@@ -25,65 +25,65 @@ function init()
    bufferctx = buffer.getContext("2d");
 
    sprites = new Array();
-   sprites[0] = new Sprite(358, -14, prefix+"/images/bubbles/",
+   sprites[0] = new Sprite(358, -14, prefix+"/Aquarium/images/bubbles/",
                            "bubbles", ".gif", 8, 0, 3);
-   sprites[1] = new Sprite(700, 230, prefix+"/images/bubbles/",
+   sprites[1] = new Sprite(700, 230, prefix+"/Aquarium/images/bubbles/",
                            "bubbles", ".gif", 8, 0, 3);
-   sprites[2] = new Sprite(640, -55, prefix+"/images/bubbles/",
+   sprites[2] = new Sprite(640, -55, prefix+"/Aquarium/images/bubbles/",
                            "bubbles", ".gif", 8, 0, 3);
-   sprites[3] = new Sprite(40, 195, prefix+"/images/bubbles/",
+   sprites[3] = new Sprite(40, 195, prefix+"/Aquarium/images/bubbles/",
                            "bubbles", ".gif", 8, 0, 3);
    sprites[4] = new Sprite(RIGHT_OF_RIGHT, RND_HEIGHT,
-                           prefix+"/images/guppy/",
+                           prefix+"/Aquarium/images/guppy/",
                            "lfish", ".gif", 6, rnd(7)+1, 0);
    sprites[4].move = moveLeft;
    sprites[5] = new Sprite(LEFT_OF_LEFT, RND_HEIGHT,
-                           prefix+"/images/guppy/",
+                           prefix+"/Aquarium/images/guppy/",
                            "rfish", ".gif", 6, rnd(7)+1, 0);
    sprites[5].move = moveRight;
    sprites[6] = new Sprite(RIGHT_OF_RIGHT, RND_HEIGHT,
-                           prefix+"/images/tigerbarb/", "lfish",
+                           prefix+"/Aquarium/images/tigerbarb/", "lfish",
                            ".gif", 8, rnd(7)+1, 0);
    sprites[6].move = moveLeft;
    sprites[7] = new Sprite(LEFT_OF_LEFT, RND_HEIGHT,
-                           prefix+"/images/tigerbarb/", "rfish",
+                           prefix+"/Aquarium/images/tigerbarb/", "rfish",
                            ".gif", 8, rnd(7)+1, 0);
    sprites[7].move = moveRight;
    sprites[8] = new Sprite(RIGHT_OF_RIGHT, RND_HEIGHT,
-                           prefix+"/images/zebrafish/", "lfish",
+                           prefix+"/Aquarium/images/zebrafish/", "lfish",
                            ".gif", 8, rnd(7)+1, 0);
    sprites[8].move = moveLeft;
    sprites[9] = new Sprite(LEFT_OF_LEFT, RND_HEIGHT,
-                           prefix+"/images/zebrafish/", "rfish", 
+                           prefix+"/Aquarium/images/zebrafish/", "rfish", 
                            ".gif", 8, rnd(7)+1, 0);
    sprites[9].move = moveRight;
    sprites[10] = new Sprite(RIGHT_OF_RIGHT, RND_HEIGHT,
-                           prefix+"/images/discus/",
+                           prefix+"/Aquarium/images/discus/",
                            "lfish", ".gif", 8, rnd(7)+1, 0);
    sprites[10].move = moveLeft;
    sprites[11] = new Sprite(LEFT_OF_LEFT, RND_HEIGHT,
-                           prefix+"/images/discus/",
+                           prefix+"/Aquarium/images/discus/",
                            "rfish", ".gif", 8, rnd(7)+1, 0);
    sprites[11].move = moveRight;
    sprites[12] = new Sprite(RIGHT_OF_RIGHT, RND_HEIGHT,
-                           prefix+"/images/angelfish/", "lfish",
+                           prefix+"/Aquarium/images/angelfish/", "lfish",
                            ".gif", 8, rnd(7)+1, 0);
    sprites[12].move = moveLeft;
    sprites[13] = new Sprite(LEFT_OF_LEFT, RND_HEIGHT,
-                           prefix+"/images/angelfish/", "rfish",
+                           prefix+"/Aquarium/images/angelfish/", "rfish",
                            ".gif", 8, rnd(7)+1, 0);
    sprites[13].move = moveRight;
    sprites[14] = new Sprite(RIGHT_OF_RIGHT, RND_HEIGHT,
-                           prefix+"/images/clownfish/", "lfish",
+                           prefix+"/Aquarium/images/clownfish/", "lfish",
                            ".gif", 8, rnd(7)+1, 0);
    sprites[14].move = moveLeft;
    sprites[15] = new Sprite(LEFT_OF_LEFT, RND_HEIGHT,
-                           prefix+"/images/clownfish/", "rfish",
+                           prefix+"/Aquarium/images/clownfish/", "rfish",
                            ".gif", 8, rnd(7)+1, 0);
    sprites[15].move = moveRight;
 
    imgBG = new Image();
-   imgBG.src = prefix+"/images/misc/bg.jpg";
+   imgBG.src = prefix+"/Aquarium/images/misc/bg.png";
 }
 
 function moveLeft(index)
