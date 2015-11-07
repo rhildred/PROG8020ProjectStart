@@ -25,6 +25,14 @@ $oApp->get("/privacy", function()use($oApp){
    $oApp->render("privacy.phtml"); 
 });
 
+$oApp->get("/success", function()use($oApp){
+   $oApp->render("success.phtml"); 
+});
+
+$oApp->get("/failure", function()use($oApp){
+   $oApp->render("failure.phtml"); 
+});
+
 $oApp->get("/products/:productID", function($nId){
     renderProduct($nId);
 });
