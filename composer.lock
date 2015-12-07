@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "22cb3b13815b694db9bf94bfea04e455",
+    "hash": "0b9bff4638df3acc28f2a408b2d97421",
     "content-hash": "b76ebcec377caa3efa44ea0d41b4c659",
     "packages": [
         {
@@ -94,12 +94,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rhildred/oauth2.git",
-                "reference": "9d5a48902744c36140987520c262cd69ee8f2ede"
+                "reference": "b9b2c8241c25a548def5ebd5288849345ebb8c06"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rhildred/oauth2/zipball/9d5a48902744c36140987520c262cd69ee8f2ede",
-                "reference": "9d5a48902744c36140987520c262cd69ee8f2ede",
+                "url": "https://api.github.com/repos/rhildred/oauth2/zipball/b9b2c8241c25a548def5ebd5288849345ebb8c06",
+                "reference": "b9b2c8241c25a548def5ebd5288849345ebb8c06",
                 "shasum": ""
             },
             "type": "library",
@@ -112,7 +112,7 @@
             "license": [
                 "MIT"
             ],
-            "time": "2015-12-01 03:17:43"
+            "time": "2015-12-07 05:11:01"
         },
         {
             "name": "rhildred/slimphpviews",
