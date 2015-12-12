@@ -103,4 +103,24 @@ function renderProduct($nId){
 
 ```
 
+There is also an inquiry form in the views/contact.phtml that is based on a web service that I am providing my students:
+
+```
+
+        <form action="https://rich-hildred.rhcloud.com/Mailer/56519ee51ea119ef4e20e8">
+            <input type="email" name="email" placeholder="Reply email address" />
+            <br />
+            <input type="text" name="subject" placeholder="Subject of your inquiry" />
+            <br />
+            <textarea name="message" placeholder="Your Inquiry"></textarea>
+            <br />
+            <button type="submit" class="btn btn-primary btn-md">Send</button>
+            <button type="reset" class="btn btn-primary btn-md">Reset</button>
+            <br />
+        </form>
+
+```
+
+If you surf to [rich-hildred.rhcloud.com](https://rich-hildred.rhcloud.com/login) you can set up your own url to put in the form action with a google plus oauth2 login. The inquiry form uses the `/success` and `/failure` endpoints in the above index.phtml. Alternatively you could use the `rhildred/mailer` composer package to make your own endpoint to send mail. I also have a composer package rhildred/bitbucket-bug-report, which can be used to create a bug report on bitbucket for inquiries.
+
 The idea is that this can be used in an introductory modern php class to scaffold a student's site based on some other subject and content.
