@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "22cb3b13815b694db9bf94bfea04e455",
-    "content-hash": "b76ebcec377caa3efa44ea0d41b4c659",
+    "hash": "fa0a9f7a71d50695b144869842f3cd3e",
+    "content-hash": "8bfdec8ef7d98b84b2c5bf5a9cb4356a",
     "packages": [
         {
             "name": "michelf/php-markdown",
@@ -89,32 +89,6 @@
             "time": "2015-01-11 14:58:51"
         },
         {
-            "name": "rhildred/oauth2",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/rhildred/oauth2.git",
-                "reference": "9d5a48902744c36140987520c262cd69ee8f2ede"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/rhildred/oauth2/zipball/9d5a48902744c36140987520c262cd69ee8f2ede",
-                "reference": "9d5a48902744c36140987520c262cd69ee8f2ede",
-                "shasum": ""
-            },
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "time": "2015-12-01 03:17:43"
-        },
-        {
             "name": "rhildred/slimphpviews",
             "version": "dev-master",
             "source": {
@@ -192,8 +166,7 @@
     "minimum-stability": "stable",
     "stability-flags": {
         "rhildred/slimphpviews": 20,
-        "rhildred/editable": 20,
-        "rhildred/oauth2": 20
+        "rhildred/editable": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

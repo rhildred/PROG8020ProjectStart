@@ -17,10 +17,6 @@ $oApp->get("/about", function()use($oApp){
    $oApp->render("about.phtml"); 
 });
 
-$oApp->get("/crud", function()use($oApp){
-   $oApp->render("crud.phtml"); 
-});
-
 $oApp->get("/contact", function()use($oApp){
    $oApp->render("contact.phtml"); 
 });

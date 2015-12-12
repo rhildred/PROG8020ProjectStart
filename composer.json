@@ -2,7 +2,6 @@
     "require": {
         "slim/slim": "^2.6",
         "rhildred/slimphpviews": "dev-master",
-        "rhildred/editable": "dev-master",
-        "rhildred/oauth2": "dev-master"
+        "rhildred/editable": "dev-master"
     }
 }
