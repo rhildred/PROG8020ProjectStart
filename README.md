@@ -1,4 +1,4 @@
-# PROG8020 Project 1 Start
+# [PROG8020 Project 1 Start](https://github.com/rhildred/PROG8020ProjectStart/)
 This is a somewhat complete product page. It uses Google rich snippets for products, and gets the products, image urls and offer's from a sqlite database that is committed as part of the project. Composer is used to update the dependencies from the composer.json file:
 
 ```
